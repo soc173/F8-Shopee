@@ -1,0 +1,387 @@
+:root{
+    --primary-color: #ee4d2d;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color:  #333;
+    --border-color: #dbdbdb; 
+    --star-gold-color: #ffce3e;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+
+/* Responsive */
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+/* test     */
+.grid__column-2{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.66667%;
+}
+
+.grid__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc( 8.33333% * 10);
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from{
+        transform: scale(var(--growth-from));
+    }
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
+/* MODAL */
+.modal{
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    display: flex;
+    animation: fadeIn linear 0.16s;
+}
+
+.modal__overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0,0,0, 0.3);
+    z-index: 1;
+}
+
+.modal__body{
+    --growth-from: 0.7;
+    --growth-to:   1;
+    margin: auto;
+    z-index: 2;
+    border-radius: 5px;
+    animation: growth linear 0.1s;
+}
+
+/* Authen modal  */
+.auth-form{
+    width: 500px;
+    background-color: var(--white-color);
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.auth-form__container{
+    padding: 0 32px;
+}
+
+.auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+}
+
+.auth-form__heading{
+font-size: 2.4rem;
+font-weight: 400;
+}
+
+.auth-form__switch-btn{
+font-size: 2rem;
+color: var(--primary-color);
+font-weight: 430;
+cursor: pointer;
+}
+
+.auth-form__form{
+width: 100%;
+}
+
+.auth-form__group{
+/* width: 100%;
+padding-bottom: 16px; */
+}
+
+.auth-form__input{
+width: 100%;
+height: 40px;
+padding: 0px 12px;
+margin-top: 16px;
+font-size: 1.4rem;
+border: 1px solid var(--border-color);
+border-radius: 2px;
+outline: none;
+}
+
+.auth-form__input:focus{
+border-color: #888;
+}
+
+.auth-form__aside{
+margin-top: 16px !important;
+padding-bottom: 80px;
+font-size: 1.4rem;
+text-align: center;
+line-height: 1.4;
+margin: 0 16px;
+}
+
+.auth-form__policy-text{
+
+}
+
+.auth-form__text-link{
+color: var(--primary-color);
+text-decoration: none;
+
+}
+
+/* button style  */
+.btn{
+    min-width: 124px;
+    height:36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    cursor: pointer;
+    outline: none;
+    color: var(--text-color);
+    /* background-color: rgba(0,0,0, 0.02); */
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn.btn-normal:hover{
+    background-color: rgba(0,0,0, 0.15);
+}
+
+.btn.btn-primary {
+background-color: var(--primary-color);
+color: var(--white-color);
+}
+
+.btn.btn-disabled{
+cursor: default;
+background-color: rgb(211, 211, 211);
+color: rgb(150, 150, 150);
+}
+
+.auth-form__controls{
+display: flex;
+justify-content: end;  
+margin-bottom: 26px;  
+}
+
+.auth-form__controls-back{
+    margin-right: 4px;
+}
+
+.auth-form__socials{
+background-color: #f5f5f5;
+padding: 14px 32px;
+display: flex;
+justify-content: space-around;
+}
+
+.btn.btn--size-s{
+    height: 32px;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 0 8px;
+}
+
+.auth-form__socials--facebook{
+    background-color: #3a5a98;
+    width: 50%;
+}
+
+.auth-form__socials--google{
+    background-color: var(--white-color);
+    width: 50%;
+    color: var(--text-color);
+}
+
+.auth-form__socials-icon{
+    font-size: 1.8rem;
+}
+
+.auth-form__socials--facebook{
+    color: var(--white-color);
+
+}
+
+.auth-form__socials-title{
+    margin-left: 12px;
+}
+
+.space {
+    height: 8px;
+    width: 8px;
+    background-color: #fff;
+}
+
+.auth-form__help{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.auth-form__help-link{
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0 16px;
+    color: #a7a7a7;
+}
+
+.auth-form__help-separate{
+    display: block;
+    border-left: 1px solid #dbdbdb;
+    height: 22px;
+    margin-bottom: 2px;
+}
+
+.auth-form__help-forgot{
+    color: var(--primary-color);
+}
+
+/* selecion  */
+
+.select-input{
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.select-input__label{
+    font-size: 1.4rem;
+}
+
+.select-input__icon{
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1px;
+}
+
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input__list{
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 25px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    padding: 8px 16px;
+    list-style: none;
+    display: none;
+}
+
+.select-input__link{
+    font-size: 1.4rem;
+    color:var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+
+}
+
+.select-input__link:hover{
+    color: var(--primary-color);
+}
+
+
+/* Pagination  */
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item{
+    margin: 0 12px;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.pagination-item--active .pagination-item__link:hover{
+    background-color: var(--primary-color);
+    filter: brightness(120%);
+}
+
+.pagination-item__link{
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+}
+
+.pagination-item__icon{
+
+}
+
+

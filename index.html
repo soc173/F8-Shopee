@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopeeSoc</title>
+    <link rel="icon" href="https://www.freepnglogos.com/uploads/shopee-logo-png/shopee-logo-shop-with-the-gentlemen-collection-and-win-the-shopee-0.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="grid">
+                <nav class="header__navbar">
+                    
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
+                            <span>Vào cửa hàng trên ứng dụng F8-Shop</span>
+                            
+                            <div class="header__qr header__navbar-title--no-pointer">
+                                <img src="./assets/img/qrcode.png" alt="QR-Code" class="header__qr-img">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/appstore.png" alt="App Store" class="header__qr-download-img">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="./assets/img/googleplay.png" alt="Google Play" class="header__qr-download-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="header__navbar-item header__navbar-title--no-pointer">
+                            <span class="">Kết nối</span>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="fab fa-facebook header__navbar-item__icon"></i>
+                            </a>
+                            <a href="" class="header__navbar-icon-link">
+                                <i class="fab fa-instagram-square header__navbar-item__icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="header__navbar-list">
+                        <li class="header__navbar-item notify">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="far fa-bell"></i>
+                                Thông báo
+                            </a>
+                            <div class="header__notify header__navbar-title--no-pointer">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                </header>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUYGRgaGhobGxsaGxgbHR0bIRobGhsdGxobIi0kGx0qIRofJjclKi4xNDQ0GiM6PzozPi0zNDEBCwsLEA8QHxISHzUqJCozMzMzMzM1MzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM//AABEIANMA7wMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAgQFBgcAAQj/xABOEAACAAMEBQkDBgoJBAMBAAABAgADEQQSITEFBkFRYSJxgZGhscHR8AcTMhRCUmKS4SMzU1SCoqOywtIVFiRDY3KT0/Fzg7PiNDXEJf/EABoBAAIDAQEAAAAAAAAAAAAAAAEDAAIEBQb/xAArEQACAQIFBAICAgMBAAAAAAAAAQIDEQQSITFRExQiQTJxYYEFUjNCkRX/2gAMAwEAAhEDEQA/ALIE3Zb/AC3wtBl2n14QsphXZA3nAUu9flv6Iz5jdYOXCjYo7fXbEfMtRZuT1mCXNrnHdt6tkDmUbAD1xPhF0wHXttekx4rbh0ny2x6kjpPZDhUA4n12RZAYJJdMTBh1V6/XGPK7er7h4wkHaf8Anzh0W3ohU2opyewcKKY9Q9YwKbaLowwG8+sTAzO3Z8YaPJLGpJPRDnQqP0Yv/Rw/9kJnOTwG/b90NytchgMcM+euznh01mcnLop4QVbMaUqBvHnGeeGqP0Ojj6D/ANkMEs7TPiJuw+QKourgPWcGFlY4Aim4QObY5mwjt8oX21XgZ3lF+0N5s0DaanrMeSpLOQKE7kUEnfsxJhSWMg1qPXGmEPNESyJykkE3XpSv0GygPDVErtaBWLpN2TVxsbFN2ynA3XW8oQZD/k3H6LeUXKzS1ZASoNa7OJhZs6fREUdNDeoUj3R2ggc3dvMCd8KAXRxzi9Gzru7T5x58nXj9pvOB0w5yg3hsw7/uEeNMAFK4bh4nbF9NlXj1mPP6PlnMdinvETpkzlJlilCctg9bI9Mzri7No6XQm6pw2oh/hiv6WsqJMDhQAyigAAF4Eg4DDMDriOnZXIp3dhjJs4XluMdg8T5QtVZzXIb+HDzhSSyTeboEOGOF0Z7T5RQsDRB8KigGf/MJtE4KCBzfcPOOnz7oujDv64DZbOXNTgB6pzxZEYqRKNLx6I8E9g2BHVhXhj2w7nMAKAYnAeNPW2PFkhcDnD4FGIeYW8z4LHCoyBqdubnr+ERymmPb5DYI4KT4/eYzIcxHrDxbwg0uVw6B47o898iYHP11c0JFqLDkCg9VhsSjDlru0eA848A27ejt8oQkvaceJx6hHkycACBmN3rDog3BYUzAZmp3D1hA5JLkgHLdj1nbDV3JHgNvTth/o1BcJIGf1sNmyNOHXmjD/ITy0WudD1ZBGRA6/KDKrfRB5iB2HCCMg2gdR8WEDuJsWvMBTrOEdRyueXhTSEswGakc1VPVkeuPDN4huDCh9dEcWGQ6lx+7vjvd4VbAbhj2juETQarvYG7jYCDuqOyuBHVHgmnfh0kU5j4GC+5zqOjzp+6IJ7vzx2cTx3DZEzJFo05bjF6knCm+pyGzmJ3Vh1o5KTFN0DkvX7DUx2x4skNj80HAbWO+CWQD3y45B/3GhNaonBmrC07TT/JOWD8Wv6X77Qcw30d+LX9L99ocGOSzvoSxpAPlculS1BxBHzb2R4Yw4jwIMqDqEAImXNVsFINAD0EVHZBBCVQDIAcwhQgkCrEBpqStxWb5jsOhhUV6V7YnlMR+lJN5XG9Lw51x7gYLV00BaO5XFfaczlw++PHm0HGB36Dj6xMDRCxr37BvPGEJDzpcouw3RJMQFpTAYYbTA0SmAzPYISzEnDZ69dcXQBSihrm/7vAcYSzXcBn69ehHtcKL0nwHnCUlA/FiN2VTz7AO09ZbAqwYJrxg5IArXGGyNTiTkIXJllsTiBvyHXnGa40bCy3jVsRswwHND2XLAGNNmA8T4R6SKmhoBt9ZQ2a2bEFePlBuAcTTvN0bhn0nZEfOlMrggGjZAw6s6444txyX74chBXHlN6y3CLpgGi2amJOe/wBdkSshaKBj3QyKXmAGNM9w5t5iRpGijLK2zi/yk3pFfYMruA9c8IKVOJJ6cOswUrHUjT1kcbKIC0yp4ebQoLjtr2/+ojiDChu2d/OYjxCHQQpU21y27BwG88YHayQtQu0UU5kEirEbaCpptpQQSp8uHMI8AxrCZ4rg0K1rDb3kzk/gwWZyu1aJcYhrpqVJYBaHHGu3DzRsyYZiBkumjltwN03QCTjgT1Q9UZ0BJ2wqzo3vFwwx3fRbYIRLEZtDXSjeSZIWL8WOdv3jBYDYDWWDxb94waAzpo4x1Y6BTXps7/AGIELHogKTammHWfKCiIQIsInAVUnKtOv7qwoR01arBRCjzLOVdkPzWIPGhwhysulBt2DxMPdLyws0t9IKRznDrqIZ36E0PKOFdwhTVmMT0DFaclcTtO7gIG2GAgg5K4Qg1BoPjOPMPpHw9UK3IJCbK0+kdwzpXYd+4c8FAyG7ZwjxZYAA3Y49dTxrBVXGvqsMQGNhYwMWOG0DNj5Qi0WkLgdmSjxMBae7th0ncOfZHJLGwVO/y3CMlx1gL3phF7BdgGA6YMqXRhhx2no2CFkUx27Pu84Bf6TBuBjqRNvckUQ57+kHb3wV3Cig+8niYh59vlS+S8xQw+bWlOPPxgP9LyjgJqsTtxw59/PDo05P0xEq1NbtE9o8l5meAFadgiWKRXtE6Xs0pWLzQCTtDbubjD5taLFn79epvKLKE16ZxcXUjOpdMkTLjy5Eemslkb4ZynmD+Uc+sdkXOcBzhh3iJlnwzL4khcj2kRZ1psf5wvb5Ry6zWM4fKE6z5QHCfDGKxKUhSS/X/MRg1jsZNPfoeYw6l6bkN8DqftGF9OXDLxlBbsf3N5A7e/yhCIPeLQsc8TlkYYtpqSPinIo6vDGOTTNlvKffK3GpNMCMhFVSnmWjNNKtC+6JawLSWBxPfBzEPZdO2cJjMAxOxt/NHr6y2Qf3w+y/lGt05cGxV6f9kSExZleSyAfWViesMIa2lptCFmSQ+y8rUB3kX8eaGj602Mf3v6jn+GBTNabGf709EuZ/LE6cuCPEU/7IeynnhuVMkMtBSiupDD4vnmoPRTjDtWmbkPSw8DEF/WexjOc1K7Jczygn9dLCMPekf9uZ/LB6cuCLEU37RZVglIrCa72Gv44/6cz+WDjXOw/lv2cz+WJ058B7inygunpVAjjYSMeOI8Yi0TaYLpLW+wPLKieK4EC64xB4rzwGy2mXMT3itVM6449Bxhc4SWrQynVjLRMIeSK0qTgq7z5begwuXLIGOLHM+tghcmUTy2wJGA+iu7nNMebhBRLiqHAhLrlBFTI1GFRj3wVxSg2nPygbMoFTFgbkSssbOvyhV+mAw7zHT5wyGUNQa7ec+UZB4RzXDjHlSDdXPad0chrgooN/lxhFSTdXAbYKKzdlcznW+0f2lqA0AUHDM0qT1mIaw2ujEY45UFewRYrfJd5jNdJqcMDll4RMahaNYrNdZbE+8u1AyoqmnDOOvK8Ujz9OUal4tFXMy+tKP9h/KG5s5+v9h/KNL1otU+zSk92CjO92pXZdJwrhXCH8hSUSsx6lUJaorUqCcxTbuiJuWpaNKEW0rmXWZSux/sP5Q6SROmE+7kTXA3Iwp1gRoerc+fMHL5VGdTRaUu1GzDNYVrLppbCqGYrM0y+QozAUgVJOG0Qt1WnlLrCwazMz3+irV+aTvs/fHDRNq/M532fviyr7Q5X5GZ+r5wQe0OQc5U0dC/zRM8g9CkVcaLtX5pO+z98FSw2wYizTweC/fFz0JrbJtM5JCB1dyQpYClQpY5E7AYtc+xMu0HmgdZojwlORkH9H2snGyzj+j98ESxWwZWWd9kecae2BINawWTLrQUOJ4RHiGDsqZlpstt/Np3UPOAvYLZ+bTeoecbEbILxF1qb648+IoYbvo98wrEb8IHcMKwVMyL+jrZ+aTf1fOEvYbWAS1lmgAVJoDToBqY1r5KR8V4fomDy7AGFRMB6IPcMt2dPgxlTMp+Knf6b+Uddc/wBzO/038o11LLMA+E0FcYjzpAGY8pQzMgq3zQMtpxOY2QVVctivaQRmPu5n5Cd/pTP5YbP7wYmVN/038o0zSGmlklPeq112KgqQ27MYHbsrDx9GzsxLYjZSD1JR3B28PWpiaTWJJAOJMazqKb9lSuFyopxxAJ6Bh0xTdK6KmJaJq+7I5YOX0lVvGLfqJeVHVhShBFemDUWam2ClUSrKKRcApglKQmQcK+vX/EEmEEVPQIwo641cVPEx66gYbfWMEpTlHM5ecBYjaYsgkAcc8BHBQc8Bx2wsrTi3YIRnnjx2cwjKOCrlU5bANo47hArTarqkKBWh6qQo1pQU4nYIY25wstwMypBPZ6EWpq8kvyJru1OT/DGsr4RzDui1+z5KWVm+lPmnqYL/AAxVVFAOHlFx1GWlil/Wea3XNeOtiPied/j3eoyN9qH4mQN0wnqlv5w2D0AG5QOpQPCCe1DFbMm9n/dA8YZTzymHEjtpFaT8Uvs3P5v9Fr1ZQKJgH5ad/wCRoqfthV1SzzUa6bzyzgDmoYZj6pi3asjkOd8yef2rRAe1iVesV76E2Weuq+MZI/N/ZomvDQxqXa5laE1H+VO+keT7W5PJNBswXwEOFs4K1vUNcsN4FM61xrlTCPH0eBU+8WlHypiVyXOtSKnojW4pIyptln9liPMt6FqEJLd/hXdcGNKjF9kbRbbMZi0Vyh3jGMw9jtm5domblRB0lmP7ojUWMZqmj0NFPa5DaY0klgkCYUaYzNczAJNx3xJyHIIwrmIaHWNvdpMEtOWwFCSSKqWHK25boa+0GcpkGXmwdTTdeSYAepWhgi1sycGlnsYeMMpQUo3YJSeayJ6VrZMJCsiAEgE0Y0G3CufTDa1ay+7SdMEsUl1ICkqGyOINQM9kQijlDngGl1pZbVzHuWGRpxtsCU2mXTV/S/yqSs25cLVBW9exHGg7okkQCp2nwisahYWNBxbvizVjNOyk0hkHdJsUxorcxijz6rbZ52MlOoI3jF1c8lv8p7jFS0mtJ1fpBv8Axn+UQKbWZFpLQrut5/Bym3TPAnwjVkaqqeEZPrTjJXhMH7rRqVie9KQ71B6xWNOIWiZmpfNr6KTrOlLXN4rLb9S7/BA9Wj+FZd6V6mHnDjW9aWuu+TL7HmCI/Qky7PH1kde4+EXWtP8ARivlxK+y4PM2DIQtMTjsz8IaSzUiDu/zR0xzz0ASa9c+aAlccISW3Ql8NsXRCKDbKeuO8x6qbuk+UESXtOHDzjpxOWWGW4cYyjhtMcUujADbEdpAqJbdFeYkVh4lld2qpoowYnLf18Iaa0OJdle6N2JzJz6Bwh1Bea+zNim+k7cA5rKVqpBzyi5asT5cqw2dpjqi3AasQBViWpxOMZHq7bC94nYhOcWP2h6QaRYLBLXAlFPVKXZztHSrWlZM4ODpShKXJP64lLX7uZIYTPdk8lQ4vVu5MRTYNsRoNovLfsjKTyiQSc2GJw2bhGbSdbbYii5aHXE4AKeG1YK2vFvrX5S55IGSncd2f3xRaaLY6MYe3u9zcdX7TLlhZbzULsXNKlSWdr5oCBxhl7SEvaPn8Lh6nUxkFn10tnvELsr45Mo/hoY0ZreZ+hJ05kALI7FQSRySMq/5YzSjlmNveJk85PhO8dxIPdA5K4s24HryHfDyzuryyh+IGqHn+IdgPXD3TFiSRIlLeBmTKzHA+Ygqssc55TdKxrbRjSNH9ksilkd6fHMPUFFO+Ly7CKt7OZdywS+JY9tPCLC7Yxjk7tmyCskZxp/SktpribNQByjUZitKBrtQuZoaCpyvQOw22xpg1uQjPGrAbQAMgOFIpetlnYW2elMKq3UgGfXDPR9no6MFv0ZWu7DSjU7KQ6nGy0F1KiT1NQtGkbDiTbgGWYPmqQCAwoVpicM+HGGttt9ha8Ploeuw04Zj4T0gxVZDMJ4YyTiUq0xSzABXUMxCip5edMkA4xF6VkkiWBLKUAQA4k02sboqd+EXjFrVi3Vi9DTNV9LSVmiXLmIwFVuhjU3qHLIYgZRegY+f9VpQS3SARi0xAtNhvY4bRSvXG/y9sZ5pXHQd0FReSeYiKTpqYomoSaC6c+KEeIh/pvWyXZzMlvMRCoNM2Y8lTWlOJEVCdrzYpqhZxnTBWpBVQMxTAUwisE81xknpYJrLc9yKOrcqWeSa5g4c9KxpWgjWyyt4lpv2KKxl0vXLRilCtmmAqp5VFrtArQ55Y7BSPH9pahiZMyevBxLZKdIJEap3kkjNbLJy3+i2a5r+HlnfLYfZcfzRD2RLs2WeLDrQ+USut86os03DlS5hwyxEts90VTROlma0y0YjMGg6R3RaHw/6YaifXuuUX5FpnHMe2Be8xJMeCYMYwHoArtTAZwO9XGvN69dkAmTNm8+cezBWg2ZmDcgksa1By27ubeYUkivKOC9rejtPbHtnkYVboB7KjYI9nTencPujOOE2iZQbhsA9ducVPXib/ZTvJXqrFhntQVOfrCKhrwx9wKn4m+/wh+G/yIz4j4P9EJq0KSprbkbuiye2xbosEsbJb4cwlqO4xBatJWRMH0qL1kDxib9u8z+02ZB82Ux63p/DG6pujl0PlJlIOg53JlgKzOzjksGuuiF3RqZOARhHh1btN6WlwBnUsqkgGgVGN4H4TR1wMDm6ZnMyveAIv/CqrVnW5Mc3Ri7DNuAg0rWS0qFIdSUuhWKKWAAQXQxFaEItRtod5gamq5GSxR14A9FAY2zR1mpq0+/5PNPa0Yig5fMrfumPoGXLpq8w32R+1WPjCp/IK2MWsaLQMVJPBwOwjn7I7TBLGpBrgDyg2GQoBlHSRLKrynFcMWUbPvEJnhKgXmblD5ysK1pjDmZkjdNUJd2xSB9SvWxMSrjGGeryUsskf4adoBiRYgZkDnIEYzUjLdbdCl7aJgpRuQ/D6J7YrMqyTLOzJMUqyNQFhyWBwBDHCh9bY1rTVjVyWUqwYUNCDj0cO6KvatXprEn31QRdo6hgFGyuf/Ah8J5UZ6lFSZWrfbCSG5IN1fmD5ouqBiQa0qTEbpOd7y6qjl3uQigMSabxtrs4iJ5tW2rd9/IFMKUbuv5w+sWqJVxNFqKlQcURQACpBOedCcYb1VayFxwyTTG2p+g2a3q7UpIABO+ZcNQDwqSeiNcRM4qegNIWGX8M5AADTlDEnMneTv4xNjWKyfl0+0Izzd2aKayqxkXtQWltmcZYPYsUyy2CbMVnRGZVrUgbhePPQGppWgi9e1VB8sBBwaTgd/qkU/R+kzLVQEVmQsZbEtVC4oxoDRshQHb1RaBZtDeVo+cwqstiAnvMB8zEXubknqgFqszywt5CoZQy1+cpxBHCJuxayTpaLLAVkEv3d1r1Ct9nJwODEMVqNnGGGmdJNOCAoqLLW4gW8aKKAAliSaADGGa2AmjY9KKH0fYH+lLA6Gk1/hjONFzqaQUn6fd/xGjrytDaPO4oP2cxfCMxQ3bap+ue2oi1LVGWppUf0ax8oAO0ncIGzsTW7QVy8YSsrr2x4FFCta1O/LZSsY9jrJ3QVTRiTzwVTQVJw21w5qw1dAXoK0Fe49cPJK3zlyV3ioLHeNoA7TwgMIWZN3dfrohtgcdg28dw490CcE4V54IkskblHdWM424J0vUrsin+0kgS5Sj6RJ6jF0d6YDojP/aLUPKU53Se2kacIvMy4l+H7CapS6og+lPkr1zEhftxeukUH0bOna7mC6lS6vZhvtEvsa9/DDH2yve0o/1Zcsfqk+MbKj8kc/Df7P8AJTHyAjgnIvfWA7Kx7MXAc0JVyRc+bevdNKd0C+o5M8ljFv8AK3cB4x9EWgBdBEH8070++Pn6TLxJ6P1lj6Rs9jWZo9JT1utIRTTdcEJm/IvFpo+cKYCC2ReWtN49dsapZvZpZWVj7yeBuDJTPilYQvs/sss1DTSRlVh/LDM6FKm7l60Kv4CUP8OX+6IrWsJpa5gGyTJ7Zs/Lq7BFtVRLSg+FFw5lHkIo9t0zY5s4ubVKRioVuUGqFZ2UXcKGrnbjhCqbSkOlsSmr0q9NN8YBBmOKgDqiWt2ijQ3DUVXA5jlDris6J1js0p2Y2yTNYqBheWl2mF3GtaUz2Rb9MaXlWeWrzHVFZgKscMi/8MCo/JkitCqs1KUwN1hgKbGBhzq/otp1mn1ODPakG0/jpyjopSIldLWVrz/L7MAa0UqzXQTjUggnM4nhFg1L05Z3Z7PKdH5TzKq9al2d3IFMBVsuIh0msuhRRaZhTyyoWpU1UNhszBB3EEEEQ6mWUY+7N8Kl9+QVKDAGoNcASMQdog+nNHstptCKMEmzFzAyYnAHPDHCHOsOj5kqfPUKVBCDMDkuFIw3EiLejO73HmvVkKS7EGz+SS69Ar4xVpdnqMo072uWWj2UAZSnXqAilyLLjQUzoDs7YXApiK2TQhxZIb2mz07YuVk0YDMRSyYuoreF2lcyd0NNZ9FiXOmoKEK7gUxFK1GPAYdEWE067vdl90K9/QNmP0HUdU1k8Yza2i7bF/6i98aLqrjoGn0J3/6FPjGeaeW7aq/WU9sWp7fsfUfn9o1NXqoO8DtEJddg9b4ShwWm4QZB/wA98ZJ6NnVpu8U/wDloa0X4mN1efMk8AKnoiaWUiAKNnqp4nHGG9glgD3lPiFEG0J/7UqeF3dCJ800IpjU98UuXGiJtOA7+eOnTdg6vPjHTX3euA84LIk0GOcKLg5MimecZ97RmvWhBuTxjRXfYMa7sz90Z3ril61GoyVR2V8Y1YReT+jFjZqMF9krqLL/D2Qf4rHqlzD4RX/alytK2jh7teqUh8Yt2ocv+2WUbhNb9mV/iiu65WdJmk7TfYqC9Khb2IVVyqN0ap/I59Gdqd+WRraIBlg+6QtReV708BWg4k9ER1p0aUKm6ijHBXv474to0Exkh1nPT3lxeQ4NQoJotagCucNG0Qq/HNdqV+JHzwBpePqkB7glXyqzK3Kk4fpDvU+EfR1iQ/JkG33afuiMQk2EsDTYR4xr2smlHsljSYgBIMtaEVwIocOAhE0XwlZTTfAuzz1RGDEAw0JvuAuPNDG2admqt8rLJu1PIHHaeaI+061T0lSplxAZjohAULQuwHTyWB7ImWWuhtui36WNJM0/Uf90x882vRM0uzAChLEVNKgC8e+N/02SLLNqcfdvjxoRHzjNt82r0mOAzGoDGhg0ySA2Q8tD9de8RsXtZc/0fLO9k7h5xj1hTlKa0oyn9dR49kbL7XP8A62z8Sn7qQZ7oiMslaHmswVVDMQMFNaG8ikNTIi+pO4HgYuXsqsrSretactJi4GuKck9tYqOibWxn2f3jsUDylIJPwCYhpzckH9Ebos3s0tbtpOVedm5LAXiSRVRv5uyLSegpNXGWv1ZekrUgJAZ1YgHO8itjvzhemNKC1zpTIrKtZEt6tW89FWvUkPvanZf/AOo9KC/LRsa7Fps5ohtFJT5OtQb1rQmlcl92BmPrtBWwtryZpPtWkXpll4CYOxYqujtHMaMFJ6KjtBEXzX2Veez8DM/giMsVkwFKjmNIWp2M+Io5p3Iz5Ca/ixs2Jw+pDDWSxlnd7lASScBtJNTQDfF6eyg3aXvhFeUc6Yww0rYyUOLY8SYspiJ4d23GGqyU0Pal+i7t1XH8Iz/WZPw/VGl6uyLuj7enCYf2Q8oz3WZPwoO8CG0/YybaUW+C8WHlKp2Uz4RIy5N5rmylW/y7B006gYjdE09yjYmqrhtJyA5ye+J+yyrq40qTyuLcOAyHNGOppJ/Z2cO7019C7U9BDSzyyTU4+qdBj20TATTdj0eu+HaIEXj6w6IWOGdnkgCp6/XdHTZlaADDZvPP5R5NmEkdgyAHH1jAa027cTtPMN0LLiiAOfafARRdNLetEzgadgPjF/s0kVqw5h4c8Um3BWnTGrm7mlMM6YdUbsGvJnI/l5NU1bkm9RE/t0sfRkTT2y18YgtaLJW3Wg/4pPdFk1DA+XtwszdsyX5Q011RJdse8Qt8K4rgDgFNCeIh0n5mWnDNRX2MtHJMYhLzFak0qcyAD2AROHRwvBmFa8k47cMRz4HphOrEyTfDtMQBaYXhjuibtdqkKK+8lgNUgmYgw2ZnMGuG48IRKflYs8OpK7I19HgBqKMvOnfDbX/T8pWFjmkBQqPUBy1cQPhwpSuY7omtH2tJpRUUmrVLFWC3V5RIJFGyAw+lGZe1r/53/bl/xRIK71G0qShF29lhTTdiaWS9tBNCKe4c051C4gV3xH2zT1iuIPe+8uMjqvu5ii8lKGgoSMAaVipSplZCIstGYM5JZpYreBC1xv1x2n5q0zrDbTU2qge7RDWpCsGPwgZAYLRR0kw7X2Pvc2MaeFq0fOmil0KVqAQDyUYmhxpVj6xjFtJSpVwsjJWqkAAg4gAj4zz/AA7I07VSQV0LNwxIZtmxZdc+YxmKW+XcJEpWagALS0uhiRiSN6hsKZ47KQqKSG3uRcg4p/nHeI2P2sPXRlk4hD+okZAMWUUFWatBgAScABsjX/aqhGjLJh8Huwee4mfVEYEZvYJEsy+UUDVOLMQRuwvrXq28IsGo9xNKyLhW6fo1IFRT6Tbt+2K/Kt8soL8tAanFZYulcKYXhiDXhjEzqbPEzSUgS0QKrg3gl0/DznDpi72FxWpZfaXJrpWTQgXpcsGtcveMp2HZFR0Ksz31nDEUE5K4fWXhwi0e11itqs0zcgx5pjEYxTtDTw1tllds68BwvVEBbAl8jcNbpdRLf6LkHmYHxAhjZKARYNI2f3qPL2sMODA1U9YijC3TEJW4jEGmE2Uh+zMZTUZdEJlHUZJFuRRDa3gXYgZmsDyzR5bA55oe1WIPQYZWrWYn+7bpKD+KAolJZbFo0HZ62W1bnDj9nSMv1gStxvqjujY9CSCtlVWADMpZhWtCwJp2xlNtk35Kb7q9wjVR9mTFKyRYdWSTKRsaIAF4tdAr0eJ4RLT57AUArjTHDnrnxyiP1V/E0r8LEdi4mJV1qab8eYZZ9MZa2k2dPC/4l9CbAt4gkbMdnMOuggtqnmtNvrLt7IIouKR84nsxpTvhmwLHD1vhLNKEg7F6T57hBZCUx2nNvAbo9WVhU4AUw2A+Jp6AzFNmMaBRUn4V37yx2DKp48QIBY9n2k4BRUnBRv38y7z5gRRwOWx+s/77CNAk2f3YvMaucz3BRsA3d5JMZtLtSjbTnzzjdgtWzifzLeVJFw9nmNtnn6MhB1vX+GLJriZcuWs6bLvoGCOKVIBPJYU3GvQx4Rn2pukJqWx5koLcuBXD1xFarSmRB8YuukNZmVD7yXLKnAgs1D2QypBuTK4aaVJJ72IpbZYGPwSOlEqeeoiSs2krJLQn3iSlw+FGxJNBgg3xS7RrBKDfg5V3/K4p2pXth/ozT8okVlXjueZh1CX3wp0S6rRbsXfQT+8V5pBxZkSv0FOfOxqegboqntT1bM+Us9By5YocCapns2xMjWWZTCSlP+of9uPJWtTFReszg7aMhHaQeyCoNDerF6GD/hFBWjjLYQcMhzYxJaD0LNtM1UuOakVqrEnGmJpgBmScgI12ZpyUTU2OZ0NLHc8ObPrRLQcixThze57/AHlYvrbQpnXJOWTRCS7OLOPhCFCd5IN49ZJj5u05YjZrTMlMuTEUO47VOzh0RvDa5D80tH7H/chlatY5EzGZYJrHey2cnrv1iqhJehiqx5Mj1K0QbTbJcsCovB2IxoBjjzCvVG4676IFoscyWBUgXlH+XOn6NYjbHrNJlfi7DOSud1bOCep4cnXRfzW1dUn/AHIMoyfoHVjyfPVSCVOYNOnLq+6NF9j2jC895xHJQUrsvej2RbLTpWxzGvPo+YSdtyQOukyHtk1mlSxdl2Oeq7lSSB2TIlna1g9SPJNaTRCyBruIOBpjQjfnn2wNrLLShVUUkjJVFccsM4j5mtcsijWS0EcVknvmQNNaJKmosU8HeJcj/chfTlcPUhyWojHriA0hoWsx5hlpMVyDQgVXAA4U5WVcxAl1rvHkyJgp9Mop6gWHbC/6yt+QP+ovlBdN+wdWL9ld0hq+zTKy5ctF3UdTXmqYXozVSc01XcIEUgnBzlz4RYhrOfyP7QfyxzazNT8T+0H8sTplc8b7llQZRj5FZajhTqwi5zNaZoVilnBYA0rMoK/Y7IzyTpDkBT8Qzrgb23th9GO5ixlS6Vi1asqfduK0o1esDyiySZYpePN0RX9TGDrMYnAMvdlzVET8w+Z47Yx4j5s62Cd6KuNra+wbvv7u8QOQMMcBv8IEzVPDL1whzNa6AB8XqvryjOzYhss9q3GF9xgoGAYfSr80D5240pWqxISJQl1J5TtQVApzBRsUVNBxxqSSfLPZhLqTy3alTTOmQG4CpoNlTtqY9nzLoxxJ9et8VCCtD0zxPdEA+rkjapqeI7cIlnJrjmchnTeTxjlFBx2cSTti8Kko/F2F1KUJ/JXIC36Pl2eWzSi6uSowbDnYAYxBWq0u4o7FhuJPnFy0vo55ksBSPiDGppXD10RXn1fnHIL9r7odGvK2rESwtP0itkgHBF/W849+UkHBVw20bzidfVa0HABOJvQF9VrRW6qr9oeqxbrvkX2lLgYJp6cOSpUDmJ7zC305OPzh0Dyh6uqNpyCL9oevXGPDqjayaBFptN4ROtLkPaw4IkaTmHEkc/K84VL09OX4SOquPTEi+p1syEsUH116BnDUapWt3ZElglaBqOtFqK0rX4qYndUbxE60uSdtDgF/W20Zcgjfdz7coQ+sM1s1XovDxh+modu2Sh9tPP1WDD2f27P3IP8A3E5htidaXIO3p8EbL1jmLkq9NTWFvrRPpknQp84f/wBQ7dn7n9eX0fOga6g28n8R+un80HqS5D29PgZJpWa+JIHXjB00/OTBSpxGYr4xILqXblFPcH7ad96Ef1Ptv5E/aTP7UVdWQe3hwN/6wTztQbcFPnA/6fnVwK4fV++Hk7VS1jASTz3k3c8DXVi1D+5brTziKvIKwtPgGNPz/qfZ++ObTs/Mso/REOU1atIFTKPAVXrzgE7V+0VoZRoMW+HPdnsideRO0p8AU03PIqSo/REGGlp4HxLU7Lgz2CFy9A2jP3bcMvOCWXQ05yWMtrqkgZYtkerLnrFuuydrDgeWO1zWzddgJCDM7seeJBtTJcxixmMakkm7THmBhCaJmon4s16Mz0+qRaZfJQA50FerugSryWzAsJTe6GGh9DpZVZQ5cMRmKb6DM1zJr5Qe0zaA08MSYJfryjiBlxOPrpMMXJZqbMzCJScndmmnTUFZCrOpxJ2eNfugitVia9PreY6d9H1WCWNBiSKgdpioweS8Sx406MMIZLi2OOEdHRUg3zPT4Q5s+fV3R0dEIdaPXXA5Xn4R0dAIOl+Ac3lCLJmI6OggHB+GvCFDLqjo6Cip5aHKyWYGhCsa8aZ9kdoJAJMvDNUJ4lgWYniSax0dF0UexLSfLvHmeuHibPWwR0dF47imEOyO2R0dFgA22etkCOXSO+OjoqyIZTM+nzMDOz1vjo6KMcgc7urEd80etv3x0dFS4jSTkS5hBpRTThB7MgCywBQcnDoEdHRAodzfiHNDKd8UdHRERApnwet/3Q3sS588dHRCwt8x62wdT+DHrbHR0Qh//9k=" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm 0hui chính hãng</span>
+                                                <span class="header__notify-description">Mô tả mỹ phẩm 0hui chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm 0hui chính hãng</span>
+                                                <span class="header__notify-description">Mô tả mỹ phẩm 0hui chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul class="header__notify-list">
+                                    <li class="header__notify-item">
+                                        <a href="" class="header__notify-link">
+                                            <img src="data:image/jpeg;base64,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" alt="" class="header__notify-img">
+                                            <div class="header__notify-info">
+                                                <span class="header__notify-name">Mỹ phẩm 0hui chính hãng</span>
+                                                <span class="header__notify-description">Mô tả mỹ phẩm 0hui chính hãng</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">
+                                        <span>Xem tất cả</span>
+                                    </a>
+                                </footer>
+                            </div>
+                        </li>
+                        
+                        <li class="header__navbar-item">
+                            <a href="" class="header__navbar-item-link">
+                                <i class="far fa-question-circle"></i>
+                                Trợ giúp</a>
+                        </li>
+                        
+                        <!-- <li class="header__navbar-item header__navbar-item--strong header__navbar-item--separate">
+                            Đăng ký
+                        </li>
+                        
+                        <li class="header__navbar-item header__navbar-item--strong">
+                            Đăng nhập
+                        </li> -->
+
+                        <li class="header__navbar-item header__navbar-user">
+                            <img src="https://baobongda.org/wp-content/uploads/2021/01/tieu-su-david-beckham-cuoc-doi-va-su-nghiep-bong-da.jpg" alt="" class="header__navbar-user-img">
+                            <span class="header__navbar-user-name">David Beckham</span>  
+                            
+                            <ul class="header__navbar-user-item-menu">
+                                <li class="header__navbar-user-item">
+                                    <a href="">Tài khoảng của tôi</a>
+                                </li>
+                                
+                                <li class="header__navbar-user-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đơn mua </a>
+                                </li>
+
+                                <li class="header__navbar-user-item">
+                                    <a href="">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+
+                <div class="header-with-search">
+                    <!-- header-logo  -->
+                    <a href="" class="header__logo-link">
+                        <div class="header__logo">
+                            <img class="header__logo-img" src="http://storage.googleapis.com/ops-shopee-files-live/live/affiliate-blog/2019/05/logo-full-white.png" alt="">
+                        </div>
+                    </a>
+                    
+                    <!-- header-search -->
+                    <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input " placeholder="Nhập để tìm kiếm sản phẩm">
+
+                            <!-- Search history  -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">NTTV</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">TA</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-label">Trong shop</span>
+                            <i class="fas fa-chevron-down header__search-select-icon"></i>
+
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item">
+                                    <span>Trong shop</span>
+                                    <i class="fas fa-check"></i>
+                                </li>
+                                
+                                <li class="header__search-option-item">
+                                    <span>Ngoài shop</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button class="header__search-btn">
+                            <i class="fas fa-search header__search-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- header-cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            <span class="header__cart-notice">3</span>
+
+                             <!-- no cart : header__cart-list--no-cart  -->
+                            <div class="header__cart-list ">
+                                <img src="https://foodhub.vn/assets/images/no-cart.png" alt="" class="header__cart-no-cart-img">
+                                <p class="header__cart-list-no-cart-msg">Chưa có sản phẩm</p>
+
+                                <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
+                                <ul class="header__cart-list-item">
+                                    <!-- cart item  -->
+                                    <li class="header__cart-item">
+                                        <img src="https://salt.tikicdn.com/cache/w1200/ts/product/29/31/6e/ef6591e3205031cd1f2b2a52768c1ea1.jpg" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kitkat vị trà xanh</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__cart-item">
+                                        <img src="https://cf.shopee.vn/file/a4a311745c4d07d7f6fab58cfe89891f" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kitkat vị rượu</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="header__cart-item">
+                                        <img src="https://cf.shopee.vn/file/e0299168c7668a2d988b5c643b35cc61" alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-head">
+                                                <h5 class="header__cart-item-name">Kitkat vị kem đào</h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price">2.000.000đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-description">
+                                                    Phân loại: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+
+
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="header__cart-view-cart btn btn-primary">Xem giỏ hàng</a>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        
+
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row app__content">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category__heading">
+                                <i class="category__heading-icon fas fa-list"></i>
+                                Danh mục
+                            </h3>
+                            
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="" class="category-item-link">Trang điểm mặt</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item-link">Trang điểm môi</a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="" class="category-item-link">Trang điểm mắt</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+    
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter__label">Sắp xếp theo</span>
+                            <button class="home-filter__btn btn">Phổ biến</button>
+                            <button class="home-filter__btn btn btn-primary">Mới nhất</button>
+                            <button class="home-filter__btn btn">Bán chạy</button>
+
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: Thấp đến cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                       <a href="" class="select-input__link">Giá: Cao đến thấp</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="home-filter__page">
+                                <span class="home-filter__page-num">1
+                                    <span class="home-filter__page-current">
+                                        /14
+                                    </span>
+                                </span>
+
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
+                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="home-product">
+                            <div class="grid__row">
+                                
+                                <!-- Product-item  -->
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                <div class="grid__column-2-4 ">
+                                    <a class="home-product-item">
+                                        <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/7ce62e33bd9fa14410dda70eedb7440e);"></div>
+                                        <h4 class="home-product-item__name">Cây Lau Nhà Phun Nước Xiaomi Deerma Water Spray Mop - TB500</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">1.200.000đ</span>
+                                            <span class="home-product-item__price-current">999.000đ</span>
+                                        </div>
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="home-product-item__sold">173 đã bán</div>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Xiaomi</span>
+                                            <span class="home-product-item__origin-name">China</span>
+                                        </div>
+
+                                        <div class="home-product-item__favorite">
+                                            <i class="fas fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">17%</span>
+                                            <span class="home-product-item__sale-off-label">GIẢM</span>
+                                        </div>
+
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <ul class="pagination home-product__pagination">
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-left"></i>
+                                </a>
+                            </li>
+    
+                            <li class="pagination-item pagination-item--active">
+                                <a href="" class="pagination-item__link">1</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">2</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">3</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">4</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">5</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">...</a>
+                            </li>
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">14</a>
+                            </li>
+    
+                            <li class="pagination-item">
+                                <a href="" class="pagination-item__link">
+                                    <i class="pagination-item__icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Chăm sóc khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Trung tâm trợ giúp</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">F8-Shop Mall</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn mua hàng</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Giới thiệu</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Giới thiệu</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Tuyển dụng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Điều khoản</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Thanh toán</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-cc-visa"></i> VISA
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-amazon-pay"></i> AMAZON PAY
+                                </a>   
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-cc-paypal"></i> PAY PAY
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Theo dõi</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-facebook"></i> Facebook
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">
+                                    <i class="footer-item__icon fab fa-instagram"></i> Instagram
+                                </a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Linkedln</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid__column-2-4">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__download">
+                            <img src="./assets/img/qrcode.png" alt="Download QR" class="footer__download-qr">
+                            <div class="footer__download-apps">
+                                <a href="" class="footer__download-app-link">
+                                    <img src="./assets/img/googleplay.png" alt="Google Play" class="footer__download-app-img">
+                                    <img src="./assets/img/appstore.png" alt="App store" class="footer__download-app-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="grid__row">
+                    <p class="footer-text"> ©2021 - Bản quyền thuộc Công ty F8-Shơp</p>
+                </div>
+            </div>
+        </div>
+
+            <!-- MODAL FORM  -->
+        <!-- <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body"> -->
+        <!-- AUTH FORM  -->
+                <!-- <div class="auth-form">
+                    <div class="auth-form__container">
+                        
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng ký</h3>
+                            <span class="auth-form__switch-btn">Đăng nhập</span>
+                        </div>
+    
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                            </div>
+                        </div>
+    
+                        <div class="auth-form__aside">
+                            <p class="auth-form__policy-text">
+                                Bằng việc đăng ký, bạn đã đồng ý với chính sách bảo mật của F8-Shop về
+                                <span>
+                                    <a class="auth-form__text-link" href="">Điều khoản dịch vụ </a> &
+                                    <a href="" class="auth-form__text-link">Chính sách bảo mật</a>
+                                </span>
+                            </p>
+                        </div>
+    
+                        <div class="auth-form__controls">
+                            <button class="btn auth-form__controls-back btn-normal">TRỞ LẠI</button>
+                            <button class="btn btn-primary">ĐĂNG KÝ</button>
+                        </div>
+                    </div>
+
+
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook btn btn--size-sbtn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                            <span class="auth-form__socials-title">Kết nối với facebook</span>
+                        </a>
+                        <div class="space"></div>
+                        <a href="" class="auth-form__socials--google btn btn--size-sbtn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-google"></i>
+                            <span class="auth-form__socials-title">Kết nối với Google</span>
+                        </a>
+                    </div>
+                </div> -->
+        <!-- LOGIN FORM  -->
+                <!-- <div class="auth-form">
+                    <div class="auth-form__container">
+                        
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng nhập</h3>
+                            <span class="auth-form__switch-btn">Đăng ký</span>
+                        </div>
+
+                        <div class="auth-form__form">
+                            <div class="auth-form__group">
+                                <input type="text" class="auth-form__input" placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__group">
+                                <input type="password" class="auth-form__input" placeholder="Mật khẩu của bạn">
+                            </div>
+
+                        </div>
+
+                        <div class="auth-form__aside">
+                            <div class="auth-form__help">
+                                <a href="" class="auth-form__help-link auth-form__help-forgot">Quên Mật khẩu</a>
+                                <span class="auth-form__help-separate"></span>
+                                <a href="" class="auth-form__help-link ">Cần trợ giúp</a>
+                            </div>
+                        </div>
+
+                        <div class="auth-form__controls">
+                            <button class="btn auth-form__controls-back btn-normal">TRỞ LẠI</button>
+                            <button class="btn btn-primary">ĐĂNG NHẬP</button>
+                        </div>
+                    </div>
+
+
+                    <div class="auth-form__socials">
+                        <a href="" class="auth-form__socials--facebook btn btn--size-sbtn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-facebook-square"></i>
+                            <span class="auth-form__socials-title">Đăng nhập với facebook</span>
+                        </a>
+                        <div class="space"></div>
+                        <a href="" class="auth-form__socials--google btn btn--size-sbtn--with-icon">
+                            <i class="auth-form__socials-icon fab fa-google"></i>
+                            <span class="auth-form__socials-title">Đăng nhập với Google</span>
+                        </a>
+                    </div>
+                </div> -->
+                
+            <!-- </div>
+        </div> -->
+
+    </div>
+</body>
+</html>
